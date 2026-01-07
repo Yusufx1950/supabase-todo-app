@@ -58,22 +58,6 @@ class _TodoPageState extends State<TodoPage> {
   }
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    dinleyici();
-  }
-
-  Future<void> dinleyici() async {
-    await _client.from('todos').stream(primaryKey: ['id']).listen((
-      List<Map<String, dynamic>> data,
-    ) {
-      print("Dinleyici Çalıştı");
-      print(data);
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     final user = _client.auth.currentUser;
 
@@ -105,7 +89,6 @@ class _TodoPageState extends State<TodoPage> {
               stream: _client
                   .from('todos')
                   .stream(primaryKey: ['id']), // id tabloda primary key olmalı
-              // sadece bu kullanıcıya ait kayıtlar
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
                   return const Center(child: CircularProgressIndicator());
