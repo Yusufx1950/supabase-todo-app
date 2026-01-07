@@ -1,16 +1,63 @@
-# supabase_ders
+# Supabase ve Flutter ile Gerçek Zamanlı Todo Listesi
 
-A new Flutter project.
+Bu proje, **Supabase** ve **Flutter** kullanarak gerçek zamanlı todo listesi geliştirmeyi göstermektedir.  
+Supabase’in `stream` özelliği sayesinde veriler anlık olarak güncellenir ve Flutter tarafında **StreamBuilder** ile kolayca görselleştirilir.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Başlangıç
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Paket Kurulumu
+![Paket Kurulumu Görseli](images/flutter_pub_add.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Supabase Bağlantısı
+![Supabase Bağlantısı Görseli](images/main.dart.png)
+
+> Not: Ben projeyi WSL Ubuntu üzerinde çalıştırdım. Siz Docker Desktop, [supabase.com](https://supabase.com) veya kendi sunucunuz üzerinden bağlanabilirsiniz.
+
+---
+
+## 📝 Todo Fonksiyonları
+![Fonksiyonlar Görseli](images/todo_functions.png)
+
+- **_addTodo** → Yeni todo ekler  
+- **_toggleTodo** → Todo’nun tamamlanma durumunu değiştirir  
+- **_deleteTodo** → Todo’yu siler  
+
+---
+
+## 📡 Gerçek Zamanlı Veri Akışı
+![StreamBuilder Görseli](images/streambuilder.png)
+
+Bu kısımda iki kritik nokta var:  
+- **Stream tanımı** → `todos` tablosunu `primaryKey` üzerinden dinler.  
+- **ListView.builder** → Verileri ekrana basar.
+
+---
+
+## 🎨 Demo
+![Demo GIF](demo.gif)  
+📹 [Demo Videosu](videos/demo.mp4)
+
+---
+
+## ⚙️ Kurulum
+1. Repoyu klonlayın:  
+   `git clone https://github.com/kullaniciadi/repo-adi.git`  
+2. Paketleri yükleyin:  
+   `flutter pub get`  
+3. Uygulamayı çalıştırın:  
+   `flutter run`  
+
+---
+
+## 📌 Notlar
+- API anahtarlarını `.env` dosyasında saklayın, repoya eklemeyin.  
+- Tasarım basit tutulmuştur, odak gerçek zamanlı veri akışıdır.  
+
+---
+
+## 🤝 Katkı
+Pull request’lere açıktır. Hataları veya geliştirme önerilerini **Issues** bölümünden paylaşabilirsiniz.
