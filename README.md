@@ -39,7 +39,7 @@ Bu kısımda iki kritik nokta var:
 
 ## 🎨 Demo
 ![Demo GIF](demo.gif)  
-📹 [Demo Videosu](videos/demo.mp4)
+📹 [Demo Videosu]([videos/demo.mp4](https://vimeo.com/1152366163?fl=ip&fe=ec))
 
 ---
 
